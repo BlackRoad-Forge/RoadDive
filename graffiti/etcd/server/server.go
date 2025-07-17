@@ -72,7 +72,6 @@ func NewEmbeddedServer(opts EmbeddedServerOpts) (*EmbeddedServer, error) {
 	cfg := embed.NewConfig()
 	cfg.Name = opts.Name
 	cfg.Dir = opts.DataDir
-	cfg.EnableV2 = true
 	cfg.ClusterState = embed.ClusterStateFlagNew
 	cfg.MaxWalFiles = opts.MaxWalFiles
 	cfg.MaxSnapFiles = opts.MaxSnapFiles
