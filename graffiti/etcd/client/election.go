@@ -22,7 +22,7 @@ import (
 	"time"
 
 	"github.com/safchain/insanelock"
-	etcd "go.etcd.io/etcd/client/v2"
+	etcd "go.etcd.io/etcd/client/v3"
 	"golang.org/x/net/context"
 
 	"github.com/skydive-project/skydive/graffiti/logging"

@@ -28,7 +28,7 @@ import (
 	"github.com/casbin/casbin/model"
 	"github.com/casbin/casbin/persist"
 	"github.com/casbin/casbin/util"
-	etcd "go.etcd.io/etcd/client/v2"
+	etcd "go.etcd.io/etcd/client/v3"
 )
 
 const etcdPolicyKey = "/casbinPolicy"

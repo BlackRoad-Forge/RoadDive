@@ -22,7 +22,7 @@ import (
 	"runtime"
 
 	"github.com/casbin/casbin/persist"
-	etcd "go.etcd.io/etcd/client/v2"
+	etcd "go.etcd.io/etcd/client/v3"
 )
 
 // EtcdWatcher listens for etcd events

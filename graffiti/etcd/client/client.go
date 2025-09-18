@@ -23,7 +23,7 @@ import (
 	"strconv"
 	"time"
 
-	etcd "go.etcd.io/etcd/client/v2"
+	etcd "go.etcd.io/etcd/client/v3"
 
 	"github.com/skydive-project/skydive/graffiti/logging"
 )
