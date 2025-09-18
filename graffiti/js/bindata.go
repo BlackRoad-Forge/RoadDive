@@ -245,23 +245,25 @@ func AssetNames() []string {
 
 // _bindata is a table, holding each asset generator, mapped to its name.
 var _bindata = map[string]func() (*asset, error){
-	"api.js": apiJs,
-	"bootstrap.js": bootstrapJs,
-	"otto.js": ottoJs,
-	"promise-7.0.4.min.js": promise704MinJs,
+	"api.js":                    apiJs,
+	"bootstrap.js":              bootstrapJs,
+	"otto.js":                   ottoJs,
+	"promise-7.0.4.min.js":      promise704MinJs,
 	"promise-done-7.0.4.min.js": promiseDone704MinJs,
-	"pure-uuid.js": pureUuidJs,
+	"pure-uuid.js":              pureUuidJs,
 }
 
 // AssetDir returns the file names below a certain
 // directory embedded in the file by go-bindata.
 // For example if you run go-bindata on data/... and data contains the
 // following hierarchy:
-//     data/
-//       foo.txt
-//       img/
-//         a.png
-//         b.png
+//
+//	data/
+//	  foo.txt
+//	  img/
+//	    a.png
+//	    b.png
+//
 // then AssetDir("data") would return []string{"foo.txt", "img"}
 // AssetDir("data/img") would return []string{"a.png", "b.png"}
 // AssetDir("foo.txt") and AssetDir("notexist") would return an error
@@ -292,13 +294,14 @@ type bintree struct {
 	Func     func() (*asset, error)
 	Children map[string]*bintree
 }
+
 var _bintree = &bintree{nil, map[string]*bintree{
-	"api.js": &bintree{apiJs, map[string]*bintree{}},
-	"bootstrap.js": &bintree{bootstrapJs, map[string]*bintree{}},
-	"otto.js": &bintree{ottoJs, map[string]*bintree{}},
-	"promise-7.0.4.min.js": &bintree{promise704MinJs, map[string]*bintree{}},
-	"promise-done-7.0.4.min.js": &bintree{promiseDone704MinJs, map[string]*bintree{}},
-	"pure-uuid.js": &bintree{pureUuidJs, map[string]*bintree{}},
+	"api.js":                    {apiJs, map[string]*bintree{}},
+	"bootstrap.js":              {bootstrapJs, map[string]*bintree{}},
+	"otto.js":                   {ottoJs, map[string]*bintree{}},
+	"promise-7.0.4.min.js":      {promise704MinJs, map[string]*bintree{}},
+	"promise-done-7.0.4.min.js": {promiseDone704MinJs, map[string]*bintree{}},
+	"pure-uuid.js":              {pureUuidJs, map[string]*bintree{}},
 }}
 
 // RestoreAsset restores an asset under the given directory
@@ -347,4 +350,3 @@ func _filePath(dir, name string) string {
 	cannonicalName := strings.Replace(name, "\\", "/", -1)
 	return filepath.Join(append([]string{dir}, strings.Split(cannonicalName, "/")...)...)
 }
-

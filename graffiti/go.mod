@@ -2,7 +2,7 @@ module github.com/skydive-project/skydive/graffiti
 
 go 1.23.0
 
-toolchain go1.24.5
+toolchain go1.25.0
 
 require (
 	github.com/GehirnInc/crypt v0.0.0-20230320061759-8cc1b52080c5

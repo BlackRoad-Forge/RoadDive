@@ -465,4 +465,4 @@ replace (
 	k8s.io/sample-apiserver => k8s.io/sample-apiserver v0.33.3
 )
 
-go 1.24.5
+go 1.25.0
