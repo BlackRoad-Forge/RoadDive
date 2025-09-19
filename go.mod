@@ -69,7 +69,6 @@ require (
 	github.com/vishvananda/netlink v1.3.1
 	github.com/vishvananda/netns v0.0.5
 	github.com/weaveworks/tcptracer-bpf v0.0.0-20231024151203-7376bfdc7f68
-	go.etcd.io/etcd/client/v2 v2.305.21
 	golang.org/x/net v0.42.0
 	golang.org/x/sys v0.34.0
 	golang.org/x/tools v0.35.0
@@ -86,7 +85,10 @@ require (
 	k8s.io/client-go v0.33.3
 )
 
-require k8s.io/kube-openapi v0.0.0-20250318190949-c8a335a9a2ff // indirect
+require (
+	go.etcd.io/etcd/client/v2 v2.305.21 // indirect
+	k8s.io/kube-openapi v0.0.0-20250318190949-c8a335a9a2ff // indirect
+)
 
 require (
 	4d63.com/gocheckcompilerdirectives v1.3.0 // indirect
@@ -376,7 +378,7 @@ require (
 	go.etcd.io/bbolt v1.4.2 // indirect
 	go.etcd.io/etcd/api/v3 v3.6.2 // indirect
 	go.etcd.io/etcd/client/pkg/v3 v3.6.2 // indirect
-	go.etcd.io/etcd/client/v3 v3.6.2 // indirect
+	go.etcd.io/etcd/client/v3 v3.6.2
 	go.etcd.io/etcd/pkg/v3 v3.6.2 // indirect
 	go.etcd.io/etcd/server/v3 v3.6.2 // indirect
 	go.etcd.io/raft/v3 v3.6.0 // indirect
